@@ -14,5 +14,17 @@ The git repository:
 2. Repository (/.git --> hidden)
 
 configurations first:
-1. git config --global user.name "username"
-2. git config --global user.email "email"
+```
+git config --global user.name "username"
+git config --global user.email "email"
+```
+
+```
+git log
+```
+```
+git alias  --> shorten commands
+git init 'foldername to be created'
+ls -al --> see .git folder
+
+```
