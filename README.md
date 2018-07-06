@@ -21,10 +21,7 @@ git config --global user.email "email"
 
 ```
 git log
-```
-```
 git alias  --> shorten commands
 git init 'foldername to be created'
 ls -al --> see .git folder
-
 ```
