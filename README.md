@@ -128,3 +128,4 @@ Add unwanted files and folders name to `.gitignore` file.
 |Command|Description |
 |--|--|
 |`git checkout -b <branch>`|make new branch and switch to it|
+|`git diff master <branch>`|comparison between two branch|
