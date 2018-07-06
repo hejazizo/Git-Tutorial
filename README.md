@@ -25,3 +25,9 @@ git alias  --> shorten commands
 git init 'foldername to be created'
 ls -al --> see .git folder
 ```
+
+```
+git commit -am "message" --> add and commit
+git ls-files --> list of tracked files
+
+```
