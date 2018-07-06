@@ -71,8 +71,8 @@ git config --global user.email "email"
 |`git config --global alias.<alias_name> <git Command>`|alias for a long Command (storead in `~/.gitconfig` file which can be modified)|
 
 # Ignoring unwanted files and folders
-
 add unwanted files and folders name to `.gitignore` file.
+
 |Example|Description |
 |--|--|
 |`myfile.txt`|specific file|
