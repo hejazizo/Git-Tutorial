@@ -129,3 +129,27 @@ Add unwanted files and folders name to `.gitignore` file.
 |--|--|
 |`git checkout -b <branch>`|make new branch and switch to it|
 |`git diff master <branch>`|comparison between two branch|
+|`git merge <branch>`|merge branch `<branch>` with the current branch|
+
+**Note**: Fast-forwarded merge means git places all commits on the master branch as if we never branched away. 
+
+Get the graph with `git log --oneline --graph --decorate`:
+
+      *__*__* new branch
+     /                           --->
+    / master (no commits here)          /*__*__* master (new branch merged)
+
+
+**Note**: Fast-forwarding is only possible when there are no changes being made on the master branch.
+
+
+|Command|Description |
+|--|--|
+|`git merge <branch> --no-ff`|merge branch `<branch>` with the current branch (`master`) **without fast-forwarding**|
+
+Get the graph with `git log --oneline --graph --decorate`:
+
+      *__*__* new branch                  *__*__*
+     /                           --->    /       \
+    / master (no commits here)          / __ __ __\ master (new branch merged)
+
