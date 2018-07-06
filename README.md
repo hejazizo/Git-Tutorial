@@ -71,7 +71,7 @@ git config --global user.email "email"
 |`git config --global alias.<alias_name> <git Command>`|alias for a long Command (storead in `~/.gitconfig` file which can be modified)|
 
 # Ignoring unwanted files and folders
-add unwanted files and folders name to `.gitignore` file.
+Add unwanted files and folders name to `.gitignore` file.
 
 |Example|Description |
 |--|--|
@@ -85,7 +85,7 @@ add unwanted files and folders name to `.gitignore` file.
 
 * Note: All comparisons are done for files **tracked** by git. If file is not in the list of git tracked files (`git ls-files`), the changes will not be shown.
 
-## |Working Directory| and |Staging Area|
+## |Working Directory| and |Staged Area|
 |Command|Description |
 |--|--|
 |`git diff`|all files changes|
@@ -94,4 +94,24 @@ add unwanted files and folders name to `.gitignore` file.
 ## |Working Directory| and |Git Repository|
 |Command|Description |
 |--|--|
-|`git diff HEAD`|changes for all files tracked by git comparison with the last commit|
+|`git diff HEAD`|changes for all files tracked by git with the last commit|
+|`git diff HEAD -- <file>`|changes for `<file>` with the last commit|
+
+## |Staged Area| and |Git Repository|
+|Command|Description |
+|--|--|
+|`git diff --staged HEAD`|changes for all files tracked by git comparison with the last commit|
+|`git diff --staged HEAD -- <file>`|changes for `<file>` with the last commit|
+
+## |commit| and |last commit|
+|Command|Description |
+|--|--|
+|`git diff <commit1> <commit2>`|comparison between commit1 and commit2|
+|`git diff HEAD <commit1>`|changed compared to the last commit|
+|`git diff HEAD HEAD^`|changed compared between last commit (`HEAD`) and the one before it (`HEAD^`)
+
+## |local| and |remote|
+|Command|Description |
+|--|--|
+|`git diff master origin/master`|comparison between local repo (`master`) and remote repo (`origin/master`)|
+
