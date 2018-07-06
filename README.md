@@ -115,3 +115,16 @@ Add unwanted files and folders name to `.gitignore` file.
 |--|--|
 |`git diff master origin/master`|comparison between local repo (`master`) and remote repo (`origin/master`)|
 
+# Branching and Merging
+|Command|Description |
+|--|--|
+|`git branch`|list of all branches|
+|`git branch -a`|list of all branches including remotes|
+|`git branch <branch>`|making new branch (`<branch>`)|
+|`git branch -m <branch> <new_branch>`|renaming branch to new_branch|
+|`git checkout <branch>`|switch to branch `<branch>`|
+|`git branch -d <branch>`|removing branch|
+
+|Command|Description |
+|--|--|
+|`git checkout -b <branch>`|make new branch and switch to it|
