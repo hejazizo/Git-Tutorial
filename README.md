@@ -82,6 +82,9 @@ add unwanted files and folders name to `.gitignore` file.
 * Note: adding `README.md` does not work. `git` does not ignore readme files even if you add it to `.gitignore`.
 
 # Comparison
+
+* Note: All comparisons are done for files **tracked** by git. If file is not in the list of git tracked files (`git ls-files`), the changes will not be shown.
+
 ## |Working Directory| and |Staging Area|
 |Command|Description |
 |--|--|
@@ -91,12 +94,4 @@ add unwanted files and folders name to `.gitignore` file.
 ## |Working Directory| and |Git Repository|
 |Command|Description |
 |--|--|
-|`git diff HEAD`|all files changes|
-|`git diff <file>`|specific file changes|
-
-|Command|Description |
-|--|--|
-|``||
-|``||
-|``||
-|``||
+|`git diff HEAD`|changes for all files tracked by git comparison with the last commit|
