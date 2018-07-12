@@ -1,5 +1,5 @@
 # List of contents:
-1. [Git Basics](#Git-Basics)
+1. [Git Basics](#git-basics)
 2. [General](#General)
 3. [Undo Changes](#Undo-Changes)
 4. [Renaming and Moving](#Renaming-and-Moving)
