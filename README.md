@@ -176,7 +176,7 @@ Now in your git directory with a conflict, run `git mergetool` and you have `VSC
 |`git diff --staged HEAD -- <file>`|changes for `<file>` with the last commit|
 
 [List of Contents](#list-of-contents)
-## commit | last commit
+## Commit | Last Commit
 |Command|Description |
 |--|--|
 |`git diff <commit1> <commit2>`|comparison between commit1 and commit2|
@@ -185,7 +185,7 @@ Now in your git directory with a conflict, run `git mergetool` and you have `VSC
 
 [List of Contents](#list-of-contents)
 
-## local | remote
+## Local | Remote
 |Command|Description |
 |--|--|
 |`git diff master origin/master`|comparison between local repo (`master`) and remote repo (`origin/master`)|
