@@ -8,7 +8,7 @@
 6. [Ignoring Files](#ignoring-unwanted-files-and-folders)
 7. [Comparison](#comparison)
     1. [Setting vscode as difftool and mergetool](#setting-vscode-as-difftool-and-mergetool)
-    2. [Working Directory | Staged Area](#working-directory-\|-staged-Area)
+    2. [Working Directory vs. Staged Area](#working-directory-vs.-staged-Area)
     3. [Working Directory | Git Repository](#working-directory-|-git-repository)
     4. [Staged Area | Git Repository](#staged-area-|-git-repository)
     5. [commit | last commit](#commit-|-last-commit)
@@ -144,7 +144,7 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
 
-## Working Directory | Staged Area
+## Working Directory vs. Staged Area
 |Command|Description |
 |--|--|
 |`git diff`|all files changes|
