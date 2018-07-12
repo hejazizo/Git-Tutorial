@@ -135,9 +135,13 @@ Add unwanted files and folders name to `.gitignore` file.
 
 Get the graph with `git log --oneline --graph --decorate`:
 
-      *__*__* new branch
-     /                           --->
-    / master (no commits here)          /*__*__* master (new branch merged)
+```
+git merge <branch>
+
+  *__*__* new branch
+ /                           --->
+/ master (no commits here)          /*__*__* master (new branch merged)
+```
 
 
 **Note**: Fast-forwarding is only possible when there are no changes being made on the master branch.
@@ -149,20 +153,45 @@ Get the graph with `git log --oneline --graph --decorate`:
 
 Get the graph with `git log --oneline --graph --decorate`:
 
-      *__*__* new branch                  *__*__*
-     /                           --->    /       \
-    / master (no commits here)          / __ __ __\ master (new branch merged)
+```
+git merge <branch> --no-ff
 
+  *__*__* new branch                  *__*__*
+ /                           --->    /       \
+/ master (no commits here)          / __ __ __\ master (new branch merged)
+```
 
 # Rebasing
 
 |Command|Description |
 |--|--|
 |`git rebase <branch>`|branch is usually the master branch|
+```
+git rebase <branch>
 
-      *__*__* new branch                           *__*__* new branch
-     /                        --->                /       
-    / *__*__*__* master               / *__*__*__* master
+  *__*__* new branch                           *__*__* new branch
+ /                        --->                /       
+/ *__*__*__* master               / *__*__*__* master
+```
+|Command|Description |
+|--|--|
+|`git rebase --abort`|abort and get back to the state before `git rebase`|
+|`git pull rebase`|pull and rebase commits on top of master|
 
+```
+git pull rebase
 
+/*__* master                  
+                        --->                  
+/ *__*__*__* master             / *__*__*__*__*__* master
+```
 
+# Stashing
+```
+|Command|Description |
+|--|--|
+|`git stash`||
+|`git stash list`||
+|`git stash drop`||
+|`git stash pop`||
+```
