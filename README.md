@@ -154,3 +154,15 @@ Get the graph with `git log --oneline --graph --decorate`:
     / master (no commits here)          / __ __ __\ master (new branch merged)
 
 
+# Rebasing
+
+|Command|Description |
+|--|--|
+|`git rebase <branch>`|branch is usually the master branch|
+
+      *__*__* new branch                           *__*__* new branch
+     /                        --->                /       
+    / *__*__*__* master               / *__*__*__* master
+
+
+
