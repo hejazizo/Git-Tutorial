@@ -144,7 +144,7 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
 
-## Working Directory vs. Staged Area
+## Working Directory vs Staged Area
 |Command|Description |
 |--|--|
 |`git diff`|all files changes|
