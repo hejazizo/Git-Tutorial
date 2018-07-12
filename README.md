@@ -38,7 +38,7 @@ The git repository:
 1. Working directory (`~/projects/my-project`)
 2. Repository (`/.git` --> hidden)
 
-
+[List of Contents](#list-of-contents)
 # General
 configurations first:
 ```
@@ -59,6 +59,7 @@ git config --global user.email "email"
 |`git commit --amend`|pop up editor to update the last commit message|
 |`git ls-files`|list of tracked files|
 
+[List of Contents](#list-of-contents)
 # Undo Changes
 
 |Command|Description |
@@ -68,6 +69,7 @@ git config --global user.email "email"
 
 **Note**: `HEAD` is just a pointer.
 
+[List of Contents](#list-of-contents)
 # Renaming and Moving
 |Command|Description |
 |--|--|
@@ -75,7 +77,7 @@ git config --global user.email "email"
 |`mv <file> <newfile>`|two operations: deletion and creation|
 |`git add -A`|recursively adds files, but also updates any files renamed, moved, or deleted|
 
-
+[List of Contents](#list-of-contents)
 # History
 |Command|Description |
 |--|--|
@@ -88,10 +90,14 @@ git config --global user.email "email"
 |`git log -- <file>`|logs for a specific file|
 |`git show <commit_id>`|history of a specific commit|
 
+[List of Contents](#list-of-contents)
+
 # Alias
 |Command|Description |
 |--|--|
 |`git config --global alias.<alias_name> <git Command>`|alias for a long Command (storead in `~/.gitconfig` file which can be modified)|
+
+[List of Contents](#list-of-contents)
 
 # Ignoring unwanted files and folders
 Add unwanted files and folders name to `.gitignore` file.
@@ -104,9 +110,12 @@ Add unwanted files and folders name to `.gitignore` file.
 
 * Note: adding `README.md` does not work. `git` does not ignore readme files even if you add it to `.gitignore`.
 
+[List of Contents](#list-of-contents)
+
 # Comparison
 * Note: All comparisons are done for files **tracked** by git. If file is not in the list of git tracked files (`git ls-files`), the changes will not be shown.
 
+[List of Contents](#list-of-contents)
 ## Setting vscode as difftool and mergetool
 The way to wire them together is to modify your `.gitconfig` and you have two options.
 
@@ -144,24 +153,29 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
 
+[List of Contents](#list-of-contents)
+
 ## Working Directory | Staged Area
 |Command|Description |
 |--|--|
 |`git diff`|all files changes|
 |`git diff <file>`|specific file changes|
 
+[List of Contents](#list-of-contents)
 ## Working Directory | Git Repository
 |Command|Description |
 |--|--|
 |`git diff HEAD`|changes for all files tracked by git with the last commit|
 |`git diff HEAD -- <file>`|changes for `<file>` with the last commit|
 
+[List of Contents](#list-of-contents)
 ## Staged Area | Git Repository
 |Command|Description |
 |--|--|
 |`git diff --staged HEAD`|changes for all files tracked by git comparison with the last commit|
 |`git diff --staged HEAD -- <file>`|changes for `<file>` with the last commit|
 
+[List of Contents](#list-of-contents)
 ## commit | last commit
 |Command|Description |
 |--|--|
@@ -169,10 +183,14 @@ Now in your git directory with a conflict, run `git mergetool` and you have `VSC
 |`git diff HEAD <commit1>`|changed compared to the last commit|
 |`git diff HEAD HEAD^`|changed compared between last commit (`HEAD`) and the one before it (`HEAD^`)
 
+[List of Contents](#list-of-contents)
+
 ## local | remote
 |Command|Description |
 |--|--|
 |`git diff master origin/master`|comparison between local repo (`master`) and remote repo (`origin/master`)|
+
+[List of Contents](#list-of-contents)
 
 # Branching and Merging
 |Command|Description |
@@ -219,6 +237,7 @@ git merge <branch> --no-ff
  /                           --->    /       \
 / master (no commits here)          / __ __ __\ master (new branch merged)
 ```
+[List of Contents](#list-of-contents)
 
 # Rebasing
 
@@ -244,6 +263,8 @@ git pull rebase
                         --->                  
 / *__*__*__* master             / *__*__*__*__*__* master
 ```
+
+[List of Contents](#list-of-contents)
 
 # Stashing
 
@@ -278,6 +299,8 @@ stash@{3}
 |--|--|
 |`git stash branch <branch>`|creates a new branch `<branch>`, stashes into the new branch and drops the stash|
 
+[List of Contents](#list-of-contents)
+
 # Tagging
 |Command|Description |
 |--|--|
@@ -307,3 +330,5 @@ Annotated tag is equivalent to a commit message, but for tags.
 |Command|Description |
 |--|--|
 |`git tag -a <tag> -f <commit-id>`|updates the already defined `<tag>` on commit `<commit-id>`|
+
+[List of Contents](#list-of-contents)
