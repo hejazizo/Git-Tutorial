@@ -1,3 +1,24 @@
+# List of contents:
+1. [Git Basics](#Git-Basics)
+2. [General](#General)
+3. [Undo Changes](#Undo-Changes)
+4. [Renaming and Moving](#Renaming-and-Moving)
+4. [History](#History)
+5. [Alias](#Alias)
+6. [Ignoring Files](#Ignoring-unwanted-files-and-folders)
+7. [Comparison](#Comparison)
+    1. [Setting vscode as difftool and mergetool](##Setting-vscode-as-difftool-and-mergetool)
+    2. [Working Directory | Staged Area](##Working-Directory-|-Staged-Area)
+    3. [Working Directory | Git Repository](##Working-Directory-|-Git-Repository)
+    4. [Staged Area | Git Repository](##Staged-Area-|-Git-Repository)
+    5. [commit | last commit](##commit-|-last-commit)
+    6. [local | remote](##local-|-remote)
+8. [Branching and Merging](#Branching-and-Merging)
+9. [Rebasing](#Rebasing)
+10. [Stashing](#Stashing)
+11. [Tagging](#Tagging)
+
+
 # Git Basics
 
 3 local stage + 1 remote:
@@ -47,7 +68,7 @@ git config --global user.email "email"
 
 **Note**: `HEAD` is just a pointer.
 
-# Renaming and Moving:
+# Renaming and Moving
 |Command|Description |
 |--|--|
 |`git mv <file> <newfile>`|one renaming operation|
@@ -252,7 +273,7 @@ stash@{3}
 ```
 `stash@{3}` is the first stash we made and `stash@{0}` is the last stash.
 
-## stash into a branch
+## Stash into a Branch
 |Command|Description |
 |--|--|
 |`git stash branch <branch>`|creates a new branch `<branch>`, stashes into the new branch and drops the stash|
