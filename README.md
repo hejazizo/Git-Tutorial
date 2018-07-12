@@ -200,7 +200,8 @@ Now in your git directory with a conflict, run `git mergetool` and you have `VSC
 |`git branch <branch>`|making new branch (`<branch>`)|
 |`git branch -m <branch> <new_branch>`|renaming branch to new_branch|
 |`git checkout <branch>`|switch to branch `<branch>`|
-|`git branch -d <branch>`|removing branch|
+|`git branch -d <branch>`|removing _local_ branch|
+|`git push origin --delete <branch>`|remove _remote_ branch|
 
 |Command|Description |
 |--|--|
@@ -316,19 +317,12 @@ Annotated tag is equivalent to a commit message, but for tags.
 |`git tag -a <tag>`|`-a` means annotated tag. This tag also shows the message assigned to the tag when using `git show <tag>`|
 |`git tag -a <tag> -m <message>`|annotated message with message (does not pop up editor for message)|
 
-## Comparing Tags
+## Other Commands
 |Command|Description |
 |--|--|
-|`git diff <tag1> <tag2>`||
-
-## Tagging a Specific Commit
-|Command|Description |
-|--|--|
-|`git tag -a <tag> <commit-id>`||
-
-## Updating Tags
-|Command|Description |
-|--|--|
+|`git diff <tag1> <tag2>`|comparing tags|
+|`git tag -a <tag> <commit-id>`|tagging a specific commit|
 |`git tag -a <tag> -f <commit-id>`|updates the already defined `<tag>` on commit `<commit-id>`|
+|`git push origin master <tag>`|pushed the tag to the remote repository|
 
 [Table of Contents](#table-of-contents)
