@@ -8,7 +8,7 @@
 6. [Ignoring Files](#ignoring-unwanted-files-and-folders)
 7. [Comparison](#comparison)
     1. [Setting vscode as difftool and mergetool](#setting-vscode-as-difftool-and-mergetool)
-    2. [Setting vscode as difftool and mergetool](#setting-vscode-as-difftool-and-mergetool)
+    2. [Setting vscode as difftool and mergetool](#working-directory-vs-staged-area)
     3. [Working Directory | Git Repository](#working-directory-|-git-repository)
     4. [Staged Area | Git Repository](#staged-area-|-git-repository)
     5. [commit | last commit](#commit-|-last-commit)
