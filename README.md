@@ -123,32 +123,32 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 ```
 Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
 
-## |Working Directory| and |Staged Area|
+## Working Directory | Staged Area
 |Command|Description |
 |--|--|
 |`git diff`|all files changes|
 |`git diff <file>`|specific file changes|
 
-## |Working Directory| and |Git Repository|
+## Working Directory | Git Repository
 |Command|Description |
 |--|--|
 |`git diff HEAD`|changes for all files tracked by git with the last commit|
 |`git diff HEAD -- <file>`|changes for `<file>` with the last commit|
 
-## |Staged Area| and |Git Repository|
+## Staged Area | Git Repository
 |Command|Description |
 |--|--|
 |`git diff --staged HEAD`|changes for all files tracked by git comparison with the last commit|
 |`git diff --staged HEAD -- <file>`|changes for `<file>` with the last commit|
 
-## |commit| and |last commit|
+## commit | last commit
 |Command|Description |
 |--|--|
 |`git diff <commit1> <commit2>`|comparison between commit1 and commit2|
 |`git diff HEAD <commit1>`|changed compared to the last commit|
 |`git diff HEAD HEAD^`|changed compared between last commit (`HEAD`) and the one before it (`HEAD^`)
 
-## |local| and |remote|
+## local | remote
 |Command|Description |
 |--|--|
 |`git diff master origin/master`|comparison between local repo (`master`) and remote repo (`origin/master`)|
