@@ -35,6 +35,7 @@ git config --global user.email "email"
 |Command|Description |
 |--|--|
 |`git commit -am "message"`|add and commit|
+|`git commit --amend`|pop up editor to update the last commit message|
 |`git ls-files`|list of tracked files|
 
 # Undo Changes
@@ -44,6 +45,7 @@ git config --global user.email "email"
 |`git reset HEAD <file>`|unstage the file|
 |`git checkout -- <file>`|back to the last commit|
 
+**Note**: `HEAD` is just a pointer.
 
 # Renaming and Moving:
 |Command|Description |
@@ -82,8 +84,44 @@ Add unwanted files and folders name to `.gitignore` file.
 * Note: adding `README.md` does not work. `git` does not ignore readme files even if you add it to `.gitignore`.
 
 # Comparison
-
 * Note: All comparisons are done for files **tracked** by git. If file is not in the list of git tracked files (`git ls-files`), the changes will not be shown.
+
+## Setting vscode as difftool and mergetool
+The way to wire them together is to modify your `.gitconfig` and you have two options.
+
+1. To do this with command line entries, enter each of these:
+```
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd "code --wait $MERGED"
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+```
+2. To do this by pasting some line in the `.gitconfig` with VS Code.
+
+    * Run git `config --global core.editor "code --wait"` from the command line.
+    * From here you can enter the command `git config --global -e`. You will want to paste in the code in the "Extra Block" below.
+```
+[user]
+    name = EricDJohnson
+    email = cool-email@neat.org
+
+# Comment: You just added this via 'git config --global core.editor "code --wait"'
+[code]
+    editor = code --wait
+
+# Comment: Start of "Extra Block"
+# Comment: This is to unlock VSCode as your git diff and git merge tool    
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+# Comment: End of "Extra Block"
+```
+Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
 
 ## |Working Directory| and |Staged Area|
 |Command|Description |
@@ -214,4 +252,37 @@ stash@{3}
 ```
 `stash@{3}` is the first stash we made and `stash@{0}` is the last stash.
 
+## stash into a branch
+|Command|Description |
+|--|--|
+|`git stash branch <branch>`|creates a new branch `<branch>`, stashes into the new branch and drops the stash|
 
+# Tagging
+|Command|Description |
+|--|--|
+|`git tag <tag>`|assigns the tag `<tag>` to `HEAD`|
+|`git show <tag>`|shows changes of commit to which `<tag>` is assigned.|
+|`git tag --list`|shows the list of all tags|
+|`git tag --delete <tag>`|removes the tag with name `<tag>`|
+
+## Annotated Tag
+Annotated tag is equivalent to a commit message, but for tags.
+|Command|Description |
+|--|--|
+|`git tag -a <tag>`|`-a` means annotated tag. This tag also shows the message assigned to the tag when using `git show <tag>`|
+|`git tag -a <tag> -m <message>`|annotated message with message (does not pop up editor for message)|
+
+## Comparing Tags
+|Command|Description |
+|--|--|
+|`git diff <tag1> <tag2>`||
+
+## Tagging a Specific Commit
+|Command|Description |
+|--|--|
+|`git tag -a <tag> <commit-id>`||
+
+## Updating Tags
+|Command|Description |
+|--|--|
+|`git tag -a <tag> -f <commit-id>`|updates the already defined `<tag>` on commit `<commit-id>`|
