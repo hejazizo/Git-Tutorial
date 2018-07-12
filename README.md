@@ -187,11 +187,31 @@ git pull rebase
 ```
 
 # Stashing
-```
+
 |Command|Description |
 |--|--|
-|`git stash`||
-|`git stash list`||
-|`git stash drop`||
-|`git stash pop`||
+|`git stash`|stash the current changes|
+|`git stash -u`|also include untracked files by git|
+|`git stash list`|list of stashes|
+|`git stash drop`|drops a stash|
+|`git stash apply`|applies the stash on the current branch
+|`git stash pop`|`git stash apply` and `git stash drop` in one command|
+
+## multiple stashes
+|Command|Description |
+|--|--|
+|`git stash save "message"`|saves a stash with a message|
+|`git stash show stash@{1}`|looks at the second stash|
+|`git stash drop stash@{1}`|clears the second stash|
+|`git stash clear`|clears all stashes|
+
+**Note**: stashes have index and the last stash index is 0. e.g. 4 saved stashes:
 ```
+stash@{0}
+stash@{1}
+stash@{2}
+stash@{3}
+```
+`stash@{3}` is the first stash we made and `stash@{0}` is the last stash.
+
+
