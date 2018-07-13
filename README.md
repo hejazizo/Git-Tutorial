@@ -65,8 +65,12 @@ git config --global user.email "email"
 |Command|Description |
 |--|--|
 |`git commit -am "message"`|add and commit|
-|`git commit --amend`|pop up editor to update the last commit message|
+|`git commit --amend -m <message>`|fix the last commit|
 |`git ls-files`|list of tracked files|
+
+**Note:** `git commit --amend` will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
+
+
 
 [Table of Contents](#table-of-contents)
 # Undo Changes
