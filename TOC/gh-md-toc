@@ -128,6 +128,8 @@ gh_toc(){
             else
                 sed -i "/${ts}/r ${toc_path}" "$gh_src"
             fi
+            rm -f "$toc_path"
+            rm -f "${gh_src}${ext}"
             echo
             echo "!! TOC was added into: '$gh_src'"
             echo "!! Origin version of the file: '${gh_src}${ext}'"
