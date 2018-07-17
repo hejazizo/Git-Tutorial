@@ -334,8 +334,18 @@ Annotated tag is equivalent to a commit message, but for tags.
 |Command|Description |
 |--|--|
 |`git diff <tag1> <tag2>`|comparing tags|
-|`git tag -a <tag> <commit-id>`|tagging a specific commit|
-|`git tag -a <tag> -f <commit-id>`|updates the already defined `<tag>` on commit `<commit-id>`|
+|`git tag -a <tag> <commit_id>`|tagging a specific commit|
+|`git tag -a <tag> -f <commit_id>`|updates the already defined `<tag>` on commit `<commit_id>`|
 |`git push origin master <tag>`|pushed the tag to the remote repository|
 
 [Table of Contents](#table-of-contents)
+
+# Reset and Reflog
+|Command|Description |
+|--|--|
+|`git reflog`|history of everything we have done|
+|`git reset <commit_id>`|moves `HEAD` to the `<commit_id>`|
+
+**Note**: `git reflog` is different with `git log` as it includes everything we have done. For example. `git log` does not show moving `HEAD` between different commits.
+
+
