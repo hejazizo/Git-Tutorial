@@ -3,6 +3,7 @@
    * [Table of Contents:](#table-of-contents)
    * [Git Basics](#git-basics)
    * [General](#general)
+   * [Git Visualizer](#git-visualizer)
    * [Undo Changes](#undo-changes)
    * [Renaming and Moving](#renaming-and-moving)
    * [History](#history)
@@ -10,6 +11,7 @@
    * [Ignoring unwanted files and folders](#ignoring-unwanted-files-and-folders)
    * [Comparison](#comparison)
       * [Setting vscode as difftool and mergetool](#setting-vscode-as-difftool-and-mergetool)
+   * [Turning of the Default Prompt](#turning-of-the-default-prompt)
       * [Working Directory | Staged Area](#working-directory--staged-area)
       * [Working Directory | Git Repository](#working-directory--git-repository)
       * [Staged Area | Git Repository](#staged-area--git-repository)
@@ -23,8 +25,12 @@
    * [Tagging](#tagging)
       * [Annotated Tag](#annotated-tag)
       * [Other Commands](#other-commands)
+   * [Reset and Reflog](#reset-and-reflog)
+   * [Cherry-Pick](#cherry-pick)
+   * [Rewriting History](#rewriting-history)
+      * [Update Last Commit](#update-last-commit)
 
-<!-- Added by: ali, at: 2018-07-13T09:45-06:00 -->
+<!-- Added by: ali, at: 2018-07-17T12:49-06:00 -->
 
 <!--te-->
 
@@ -366,7 +372,7 @@ Annotated tag is equivalent to a commit message, but for tags.
 
 **Note**: `git reflog` is different with `git log` as it includes everything we have done. For example. `git log` does not show moving `HEAD` between different commits.
 
-# Chrry-Pick
+# Cherry-Pick
 |Command|Description |
 |--|--|
 |`git cherry-pick <commit_id>`|cherry-pick a specific commit (`<commit_id>`|
