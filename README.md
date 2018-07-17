@@ -57,6 +57,8 @@ git config --global user.email "email"
 
 |Command|Description|
 |--|--|
+|`git remote add origin <url>`|Adding remote to the repository|
+|`git remote -v`|Shows the list of remotes|
 |`git log`||
 |`git alias`||
 |`git init 'foldername to be created'`|shorten commands|
@@ -70,9 +72,10 @@ git config --global user.email "email"
 
 **Note:** `git commit --amend` will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
 
-
-
 [Table of Contents](#table-of-contents)
+
+# Git Visualizer
+Click [Git Visualizer](http://onlywei.github.io/explain-git-with-d3/) to see visualization of git basic commands.
 # Undo Changes
 
 |Command|Description |
@@ -109,6 +112,12 @@ git config --global user.email "email"
 |Command|Description |
 |--|--|
 |`git config --global alias.<alias_name> <git Command>`|alias for a long Command (storead in `~/.gitconfig` file which can be modified)|
+
+Examples:
+```
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.hist 'log --all --oneline --graph --decorate'
+```
 
 [Table of Contents](#table-of-contents)
 
@@ -165,6 +174,15 @@ git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
 # Comment: End of "Extra Block"
 ```
 Now in your git directory with a conflict, run `git mergetool` and you have `VSCode` helping you handle the merge conflict! To compare, run `git difftool`.
+
+# Turning of the Default Prompt
+|Command|Description |
+|--|--|
+|`git config --global diftool.prompt false`|By this setting, we will not have to deal with the prompt anymore.|
+|`git config --global mergetool.prompt false`||
+|`git config --global diftool.prompt false`|git will not keep `.orig` files after merge|
+
+**Note**: After performing a merge, the original file with conflict markers can be saved as a file with a .orig extension.If this variable is set to false then this file is not preserved. Defaults to true (i.e. keep the backup files).
 
 [Table of Contents](#table-of-contents)
 
@@ -348,4 +366,20 @@ Annotated tag is equivalent to a commit message, but for tags.
 
 **Note**: `git reflog` is different with `git log` as it includes everything we have done. For example. `git log` does not show moving `HEAD` between different commits.
 
+# Chrry-Pick
+|Command|Description |
+|--|--|
+|`git cherry-pick <commit_id>`|cherry-pick a specific commit (`<commit_id>`|
 
+
+# Rewriting History
+
+## Update Last Commit
+`git ammend` is the command to rewrite the history by changing the last commit or on your own branch at the public that no one has branched off of or is relying on the history of your branch.
+Because once you change that commit history, you are going to create a huge conflict with anybody who is relying on that history.
+**You definitely never want to do this on master.**
+
+**Note**: Be careful of using `git ammend`. You only want to do this on a local branch 
+|Command|Description |
+|--|--|
+|`git ammend`||
