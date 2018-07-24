@@ -375,7 +375,7 @@ Annotated tag is equivalent to a commit message, but for tags.
 # Cherry-Pick
 |Command|Description |
 |--|--|
-|`git cherry-pick <commit_id>`|cherry-pick a specific commit (`<commit_id>`|
+|`git cherry-pick <commit_id>`|cherry-pick a specific commit (`<commit_id>`)|
 
 
 # Rewriting History
@@ -388,4 +388,17 @@ Because once you change that commit history, you are going to create a huge conf
 **Note**: Be careful of using `git ammend`. You only want to do this on a local branch 
 |Command|Description |
 |--|--|
-|`git ammend`||
+|`git commit --amend -m <message>`|updates the last commit|
+
+## Checkout to Orphaned Commit after `ammend`
+1. First get the commit id from `git reflog`.
+2. Checkout to the commit by `git checkout <commit_id>`.
+3. Branch away by `git checkout -b <branch>`.
+
+Now `HEAD` is on the commit `<commit_id>`.
+
+## Exploring the `reflog`
+|Command|Description |
+|--|--|
+|`git reflog HEAD@{2.days.ago}`|`reflog` starting from 2 days ago|
+|`git reflog HEAD@{1.minute.ago}`|`reflog` starting from 1 minute ago|
