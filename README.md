@@ -349,6 +349,7 @@ stash@{3}
 
 ## Annotated Tag
 Annotated tag is equivalent to a commit message, but for tags.
+
 |Command|Description |
 |--|--|
 |`git tag -a <tag>`|`-a` means annotated tag. This tag also shows the message assigned to the tag when using `git show <tag>`|
