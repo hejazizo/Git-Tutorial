@@ -230,6 +230,7 @@ Now in your git directory with a conflict, run `git mergetool` and you have `VSC
 [Table of Contents](#table-of-contents)
 
 # Branching and Merging
+
 |Command|Description |
 |--|--|
 |`git branch`|list of all branches|
@@ -275,6 +276,10 @@ git merge <branch> --no-ff
  /                           --->    /       \
 / master (no commits here)          / __ __ __\ master (new branch merged)
 ```
+
+## Branch Naming Convention
+**Note**: [Read Stackoverflow](https://stackoverflow.com/questions/273695/git-branch-naming-best-practices)
+
 [Table of Contents](#table-of-contents)
 
 # Rebasing
