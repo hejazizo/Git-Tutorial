@@ -386,6 +386,7 @@ Because once you change that commit history, you are going to create a huge conf
 **You definitely never want to do this on master.**
 
 **Note**: Be careful of using `git ammend`. You only want to do this on a local branch 
+
 |Command|Description |
 |--|--|
 |`git commit --amend -m <message>`|updates the last commit|
